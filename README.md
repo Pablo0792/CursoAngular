@@ -33,6 +33,8 @@ Actualizar ultimos cambios del repositorio remoto
 
 git merge NOMBRE_DEL_REPOSITORIO_REMOTO/NOMBRE_DE_RAMA_RESPECTIVA
 
+hiciste cambios aqui
+
 Revisar en que ramas del repositorio y sobre que ramas me puedo switchar
 
 git branch 
