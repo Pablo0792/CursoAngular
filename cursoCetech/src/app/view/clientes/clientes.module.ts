@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ClientesComponent } from './clientes.component';
 import { RegistroComponent } from './registro/registro.component';
 import { DetalleClienteComponent } from './detalle-cliente/detalle-cliente.component';
-import { ClientesRoutingModule } from './/clientes-routing.module';
+
+import { ClientesRoutingModule } from './clientes.routing.module';
+
 
 @NgModule({
   imports: [

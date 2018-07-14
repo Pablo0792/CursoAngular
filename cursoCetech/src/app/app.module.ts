@@ -2,17 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { EjemploComponent } from './ejemplo/ejemplo.component';
-import { FormularioComponent } from './formulario/formulario.component';
-import { RouterModule,Routes} from "@angular/router";
-import { ClientesModule } from './view/clientes/clientes.module';
-import { RegistroComponent } from './view/clientes/registro/registro.component';
 
-const router: Routes = [
-  {
-    path: '',
-    loadChildren: './view/clientes/clientes.module#ClientesModule'
-  }
+import {RouterModule,Routes} from '@angular/router';
+import { DashboardModule } from './view/dashboard/dashboard.module';
+import { HotelesComponent } from './view/dashboard/hoteles/hoteles.component';
+import { ClientesModule } from './view/clientes/clientes.module';
+
+const route: Routes=[{
+  path:'dashboard_hoteles',
+  loadChildren:'./view/dashboard/dashboard.module#DashboardModule'
+},
+{
+  path:'clientesRegistro',
+  loadChildren:'./view/clientes/clientes.module#ClientesModule'
+}
+
 ];
 
 @NgModule({
@@ -24,8 +28,11 @@ const router: Routes = [
   ],
   imports: [
     BrowserModule,
-    ClientesModule,
-    RouterModule.forRoot(router),
+
+    RouterModule.forRoot(route),
+    DashboardModule,
+    ClientesModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
