@@ -27,8 +27,7 @@ const route: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    EjemploComponent,
-    FormularioComponent,
+
 
   ],
   imports: [
