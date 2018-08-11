@@ -13,8 +13,8 @@ import { HotelesModule } from './view/hoteles/hoteles.module';
 const route: Routes = [
   /*{
     path: '',
-    component: HotelesDasboardComponent
-  },*/
+    loadChildren: './view/dashboard/dashboard.module#DashboardModule'
+  },
   {
     path: 'dashboard_hoteles',
     loadChildren: './view/dashboard/dashboard.module#DashboardModule'
@@ -24,7 +24,7 @@ const route: Routes = [
     loadChildren: './view/clientes/clientes.module#ClientesModule'
   },
   {
-    path: 'registro-habitaciones',
+    path: 'registroHotel',
     loadChildren: './view/hoteles/hoteles.module#HotelesModule'
   }
 ];
@@ -42,7 +42,8 @@ const route: Routes = [
     RouterModule.forRoot(route),
     DashboardModule,
     ClientesModule,
-    HttpClientModule
+    HttpClientModule,
+    HotelesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
