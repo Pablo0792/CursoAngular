@@ -8,12 +8,13 @@ import { DashboardModule } from './view/dashboard/dashboard.module';
 import { ClientesModule } from './view/clientes/clientes.module';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { HotelesDasboardComponent } from './view/dashboard/hoteles-dashboard/hoteles-dashboard.component';
+import { HotelesModule } from './view/hoteles/hoteles.module';
 
 const route: Routes = [
-  {
+  /*{
     path: '',
     component: HotelesDasboardComponent
-  },
+  },*/
   {
     path: 'dashboard_hoteles',
     loadChildren: './view/dashboard/dashboard.module#DashboardModule'
@@ -21,6 +22,10 @@ const route: Routes = [
   {
     path: 'clientesRegistro',
     loadChildren: './view/clientes/clientes.module#ClientesModule'
+  },
+  {
+    path: 'registro-habitaciones',
+    loadChildren: './view/hoteles/hoteles.module#HotelesModule'
   }
 ];
 
@@ -32,6 +37,7 @@ const route: Routes = [
   ],
   imports: [
     BrowserModule,
+    HotelesModule,
 
     RouterModule.forRoot(route),
     DashboardModule,

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FranquisiasComponent } from './franquisias/franquisias.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
@@ -13,10 +13,23 @@ import { RegistroHabitacionComponent } from './control-habitaciones/registro-hab
 import { DetalleHabitacionComponent } from './control-habitaciones/detalle-habitacion/detalle-habitacion.component';
 import { RegistroEstacionamientoComponent } from './estacionamiento/registro-estacionamiento/registro-estacionamiento.component';
 import { DetalleEstacionamientoComponent } from './estacionamiento/detalle-estacionamiento/detalle-estacionamiento.component';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+
+const routesHoteles: Routes = [
+  {
+    path: 'registro-habitaciones',
+    component: RegistroComponent
+  }
+];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routesHoteles)
+
   ],
   declarations: [
     FranquisiasComponent, 
