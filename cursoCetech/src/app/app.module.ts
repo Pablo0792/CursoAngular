@@ -11,7 +11,7 @@ import { HotelesDasboardComponent } from './view/dashboard/hoteles-dashboard/hot
 import { HotelesModule } from './view/hoteles/hoteles.module';
 
 const route: Routes = [
-  /*{
+  {
     path: '',
     loadChildren: './view/dashboard/dashboard.module#DashboardModule'
   },
