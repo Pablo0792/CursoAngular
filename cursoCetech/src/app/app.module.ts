@@ -9,10 +9,11 @@ import { ClientesModule } from './view/clientes/clientes.module';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { HotelesDasboardComponent } from './view/dashboard/hoteles-dashboard/hoteles-dashboard.component';
 import { HotelesModule } from './view/hoteles/hoteles.module';
+import { NgDatepickerModule } from 'ng2-datepicker';
 
 const route: Routes = [
   {
-    path:'',
+    path: '',
     component: HotelesDasboardComponent
   },
   {
@@ -51,7 +52,8 @@ const route: Routes = [
     DashboardModule,
     ClientesModule,
     HttpClientModule,
-    HotelesModule
+    HotelesModule,
+    NgDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
