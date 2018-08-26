@@ -12,6 +12,10 @@ import { HotelesModule } from './view/hoteles/hoteles.module';
 
 const route: Routes = [
   {
+    path:'',
+    component: HotelesDasboardComponent
+  },
+  {
     path: 'hola_dashboard',
     loadChildren: './view/dashboard/dashboard.module#DashboardModule'
   },
@@ -25,6 +29,10 @@ const route: Routes = [
   },
   {
     path: 'registroHotel',
+    loadChildren: './view/hoteles/hoteles.module#HotelesModule'
+  },
+  {
+    path: 'clientesComponent',
     loadChildren: './view/hoteles/hoteles.module#HotelesModule'
   }
 ];
